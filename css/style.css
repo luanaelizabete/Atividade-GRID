@@ -1,0 +1,76 @@
+h1{
+    text-align: center;
+}
+
+.container-template-mesclagem{
+    display: grid; /* criar container */
+    width: 70vw;
+    grid-template-columns: repeat(4, 1fr); /* quantas colunas eu quero e o tamanho delas */
+    /* grid-template-rows: repeat(6, 100px); - define tamanho de linhas */
+    grid-auto-rows: 100px; /* deixa a quantidade de linhas geradas automaticamente */
+    margin: auto;
+    border: 3px solid red;
+    grid: column gap 10px;
+    grid-row-gap: 30px;
+    gap: 20px;
+    /* row-gap: 30px; */
+}
+
+.item{
+    background-color:rgb(204, 175, 241);
+    border:1px solid black;
+}
+
+.container-template-mesclagem .item6{
+    height: 100px;
+}
+
+.container-template-mesclagem .item2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.container-template-mesclagem .item4{
+    /*grid-column-start:4;
+    grid-column-end: 5; */
+
+    grid-column: 4 / 5;
+
+    /* grid-row-start: 5;
+    grid-row-end: 8;   */
+      
+    grid-row: 5 / 8;
+}
+
+.container-template-area{
+    display: grid; 
+    width: 70vw;
+    margin: auto;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-areas: 
+    "it1 it1 it1"
+    "it2 it3 it3"
+    "it2 it4 it4"
+    "it5 it5 it5";
+}
+
+.container-template-area .item1{
+    grid-area: it1;
+}
+
+.container-template-area .item2{
+    grid-area: it2;
+}
+
+.container-template-area .item3{
+    grid-area: it3;
+}
+
+.container-template-area .item4{
+    grid-area: it4;
+}
+
+.container-template-area .item5{
+    grid-area: it5;
+}
+
